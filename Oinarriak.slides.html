@@ -2994,7 +2994,46 @@ Zerrenda guztia borratu []
 </div>
 </div>
 </div>
-</aside></div></section><section>
+</aside></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Ariketa">Ariketa<a class="anchor-link" href="#Ariketa">&#182;</a></h1><p><strong> Erosketa saskia. </strong></p>
+<p>Ariketa honetan erosketa saski sinple bat simulatuko dugu. Horretarako erabiltzaileari erosi nahi duen produktu bakoitzaren balioaz galdetuko diogu. Erabiltzaileak BEZ gabe sartzen ditu prezioak. Erosgai guztiak sartutakoan hauek erakutsiko dizkiogu pantailan: erosketaren totala, BEZa zenbatekoa den eta erosi dituen produktu bakoitzaren balioa.</p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bez</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">totala</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">saskia</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">prezioa</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sartu lehen erosgaiaren prezioa:&#39;</span><span class="p">))</span>
+
+<span class="k">while</span> <span class="n">prezioa</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">bez</span> <span class="o">+=</span> <span class="n">prezioa</span> <span class="o">*</span> <span class="mf">0.21</span>
+    <span class="n">totala</span> <span class="o">+=</span> <span class="n">prezioa</span>
+    <span class="n">saskia</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prezioa</span><span class="p">)</span>
+    <span class="n">prezioa</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Erosgai gehiago? Sartu prezioa: &#39;</span><span class="p">))</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erosgaiak: </span><span class="si">{0}</span><span class="se">\n</span><span class="s1">, Batura: </span><span class="si">{1}</span><span class="se">\n</span><span class="s1">BEZ: </span><span class="si">{2}</span><span class="se">\n</span><span class="s1"> Guztira: </span><span class="si">{3}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">saskia</span><span class="p">,</span> <span class="n">totala</span><span class="p">,</span> <span class="n">bez</span><span class="p">,</span> <span class="n">totala</span> <span class="o">+</span> <span class="n">bez</span><span class="p">))</span>
+    
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">tutorial</span><span class="o">/</span><span class="n">inputoutput</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+</aside></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3101,46 +3140,28 @@ Zerrenda guztia borratu []
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ariketa">Ariketa<a class="anchor-link" href="#Ariketa">&#182;</a></h1><p><strong> Erosketa saskia. </strong></p>
-<p>Ariketa honetan erosketa saski sinple bat simulatuko dugu. Horretarako erabiltzaileari erosi nahi duen produktu bakoitzaren balioaz galdetuko diogu. Erabiltzaileak BEZ gabe sartzen ditu prezioak. Erosgai guztiak sartutakoan hauek erakutsiko dizkiogu pantailan: erosketaren totala, BEZa zenbatekoa den eta erosi dituen produktu bakoitzaren balioa.</p>
+<h1 id="Ariketa">Ariketa<a class="anchor-link" href="#Ariketa">&#182;</a></h1><p><strong> Erosketa tiketa inprimatu </strong></p>
+<p>Aurreko erosketa saskia hobetuko dugu. Oraingo honetan erabiltzaileak, erosgaiaren prezioaz gain, erosgaia bera zer den ere idatziko du.</p>
+<p>Bukaeran erosketa tiketa idatziko dugu.</p>
+<p><strong> Laguntza </strong></p>
+<ul>
+<li><p>Suposatu erabiltzaileak beti sartuko duela informazioa formatu berean, adibidez, 'patatak, 12'</p>
+</li>
+<li><p>Eragiketa bukatzean erabiltzaileak 0 sartuko du</p>
+</li>
+<li><p>Erabiltzaileak sarreran emandako datu biak metatzen joan behar gara, bukaeran erabiltzeko</p>
+</li>
+</ul>
 
 </div>
 </div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bez</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">totala</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">saskia</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">prezioa</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Sartu lehen erosgaiaren prezioa:&#39;</span><span class="p">))</span>
-
-<span class="k">while</span> <span class="n">prezioa</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">bez</span> <span class="o">+=</span> <span class="n">prezioa</span> <span class="o">*</span> <span class="mf">0.21</span>
-    <span class="n">totala</span> <span class="o">+=</span> <span class="n">prezioa</span>
-    <span class="n">saskia</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prezioa</span><span class="p">)</span>
-    <span class="n">prezioa</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Erosgai gehiago? Sartu prezioa: &#39;</span><span class="p">))</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erosgaiak: </span><span class="si">{0}</span><span class="se">\n</span><span class="s1">, Batura: </span><span class="si">{1}</span><span class="se">\n</span><span class="s1">BEZ: </span><span class="si">{2}</span><span class="se">\n</span><span class="s1"> Guztira: </span><span class="si">{3}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">saskia</span><span class="p">,</span> <span class="n">totala</span><span class="p">,</span> <span class="n">bez</span><span class="p">,</span> <span class="n">totala</span> <span class="o">+</span> <span class="n">bez</span><span class="p">))</span>
-    
-<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">tutorial</span><span class="o">/</span><span class="n">inputoutput</span><span class="o">.</span><span class="n">html</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-</aside></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -3387,7 +3408,7 @@ Eta letxugarik? False
 <h2 id="Set-en-eragiketak">Set-en eragiketak<a class="anchor-link" href="#Set-en-eragiketak">&#182;</a></h2><ul>
 <li><p><em>set</em> -ek ebakidura eta bilketa eragiketak dauzkate.</p>
 </li>
-<li><p>eragiketa hauek <em>set</em>-ak berriak bueltatzen dituzte.</p>
+<li><p>eragiketa hauek <em>set</em> berriak bueltatzen dituzte.</p>
 </li>
 </ul>
 
@@ -3431,6 +3452,16 @@ a-n edo b-n, baina bietan ez dauden letrak {&apos;z&apos;, &apos;d&apos;, &apos;
 </div>
 
 </div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Galdera">Galdera<a class="anchor-link" href="#Galdera">&#182;</a></h1><p>Zer egin beharko genuke lista edo tupla batean errepikatu gabeko elementurik badagoen edo ez aztertzeko?</p>
+
+</div>
+</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -4356,36 +4387,6 @@ sagarrak
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ariketa">Ariketa<a class="anchor-link" href="#Ariketa">&#182;</a></h2><p>Zenbakiz osatutatko lista bat emanda, bikoitiak diren elementuen zerrenda bueltatzen duen funtzioa idatzi</p>
-
-</div>
-</div>
-</div><aside class="notes">
-
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bikoitiak</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-    <span class="n">odd_nums</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">odd_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">odd_nums</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-</aside></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><p>funtzio bat dokumentatzeko bere definizioaren jarraian """ artean dokuementazioa idatziko dugu</p>
 </li>
@@ -4431,6 +4432,36 @@ sagarrak
 </div>
 
 </div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Ariketa">Ariketa<a class="anchor-link" href="#Ariketa">&#182;</a></h2><p>Zenbakiz osatutatko lista bat emanda, bikoitiak diren elementuen zerrenda bueltatzen duen funtzioa idatzi</p>
+
+</div>
+</div>
+</div><aside class="notes">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bikoitiak</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+    <span class="n">odd_nums</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">odd_nums</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">odd_nums</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+</aside></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
