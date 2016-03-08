@@ -4048,19 +4048,26 @@ Alderanztuta [1, 7, 3, 5]
 <li>hiztegia.items()</li>
 </ul>
 <p>Hiztegi bateko elementuak bueltatzen ditu iterable batean. Iterable honetako elementu bakoitza bi elementutako tupla bat da. Tuplako 0 indizean gakoa dago, eta 1 indizean balioa</p>
+<ul>
+<li>hiztegia.get(gakoa, [defektuzko_balioa])</li>
+</ul>
+<p>Gako baten balioa era 'seguruan' atzitzeko balio du. Gakoa ez bada existitzen ez da errorerik sortuko, None bueltatuko du (hau aldatu daiteke, aukerazko <em>defektuzko_balioa</em> adierazten baldin badugu)</p>
 
 </div>
 </div>
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stock</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;tomateak&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;laranjak&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stockeko itemak&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stockeko kopuruak&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stockeko elementuak&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tomate kopurua:&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tomateak&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Patata kopurua:&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;patatak&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Patata kopurua:&#39;</span><span class="p">,</span> <span class="n">stock</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;patatak&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -4073,9 +4080,12 @@ Alderanztuta [1, 7, 3, 5]
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Stockeko itemak dict_keys([&apos;laranjak&apos;, &apos;tomateak&apos;])
-Stockeko kopuruak dict_values([4, 2])
-Stockeko elementuak dict_items([(&apos;laranjak&apos;, 4), (&apos;tomateak&apos;, 2)])
+<pre>Stockeko itemak dict_keys([&apos;tomateak&apos;, &apos;laranjak&apos;])
+Stockeko kopuruak dict_values([2, 4])
+Stockeko elementuak dict_items([(&apos;tomateak&apos;, 2), (&apos;laranjak&apos;, 4)])
+Tomate kopurua: 2
+Patata kopurua: None
+Patata kopurua: 0
 </pre>
 </div>
 </div>
@@ -4356,6 +4366,7 @@ sagarrak
 <p>Funtzio definizioa:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">funtzioaren_izena</span><span class="p">([</span><span class="n">parametroak</span><span class="p">,]):</span>
         <span class="n">funtzioaren</span> <span class="n">kodea</span>
+        <span class="p">[</span><span class="k">return</span> <span class="n">baliorenbat</span><span class="p">]</span>
 </pre></div>
 
 </div>
